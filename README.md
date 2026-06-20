@@ -1,8 +1,7 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ouOQNBHg)
-PRO2UE - Übungen zu Compilerbau, SS 26, Übung 6 (Abgabe bis 20.05.2026, 13:00)
+
 ==============================================================================
 
-## 1. MidiJava (10 Punkte)
+## 1. MidiJava
 Wesentliche Sprachkonstrukte, die MiniJava fehlen, sind Verzweigungen und Schleifen. Also erwei-tern wir MiniJava um die binäre Verzweigung (`if`-Anweisung), die Abweisschleife (`while`-Schleife) sowie die Blockanweisung (…  `{` ... `}` …) – und taufen die neue Sprache MidiJava.
 Nachdem wir mit dem Datentyp `int` und ohne Erweiterungen der Ausdrücke um relationale Operatoren auskommen wollen, verwenden wir für Bedingungen in Verzweigungen und Schleifen `int`-Variablen mit der Semantik, dass jeder Wert ungleich 0 als `true` und (nur) der Wert 0 als `false` interpretiert wird. Folgende Tabelle zeigt zur Verdeutlichung eine Abbildung von MidiJava auf (vollständiges) Java:
 
@@ -91,7 +90,7 @@ Stat = [
   ].
 ```
 
-## 2. Optimierender MidiJava-Compiler (14 Punkte)
+## 2. Optimierender MidiJava-Compiler
 
 Arithmetische Ausdrücke kann man wie folgt durch Binärbäume darstellen: aus dem Operator wird der Wurzelknoten, aus dem linken Operanden der linke und aus dem rechten Operanden der rechte Teilbaum. Damit bekommt man einen sogenannten abstrakten Syntaxbaum (engl. *abstract syntax tree*, kurz AST). Sobald ein Ausdruck als AST im Hauptspeicher steht, ist es einfach, diesen mittels Baumdurchlauf (*in*-, *pre*- oder *postorder*), wieder in eine Textform (In-, Prä- oder Postfix-Notation) zu übersetzen.
 
@@ -138,10 +137,5 @@ z. B.: `... + 17 + 4 + ...` wird zu `... + 21 + ...`
     Versuchen Sie, möglichst viele solcher optimierenden AST-Transformationen zu implementieren und auf den AST anzuwenden, solange sich dadurch Verkleinerungen ergeben.
     Durch diese Transformationen soll z. B. aus dem AST für `0 + (17 + 4) * 1` ein AST mit nur mehr dem Knoten `21` entstehen.
 
-----
 
-### Hinweise:
- 1. Geben Sie für alle Ihre Lösungen immer eine *Lösungsidee* an.
- 2. Dokumentieren und kommentieren Sie Ihre Java-Programme.
- 3. Geben Sie immer auch Testfälle ab, an denen man erkennen kann, dass Ihr Java-Programm funktioniert, und dass es auch in Fehlersituationen entsprechend reagiert.
  
