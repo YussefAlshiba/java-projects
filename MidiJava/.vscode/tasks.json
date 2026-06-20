@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Java",
+            "type": "process",
+            "command": "javac",
+            "args": [ "${file}" ],
+            "windows": {
+                "command": "javac.exe",
+                "args": [ "${file}" ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "never",
+                "focus": false,
+                "echo": true,
+                "showReuseMessage": false,
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            "label": "Run Java",
+            "type": "process",
+            "command": "java",
+            "args": [ "-ea", "${fileBasenameNoExtension}" ],
+            "windows": {
+                "command": "java.exe",
+                "args": [ "-ea", "${fileBasenameNoExtension}" ]
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "echo": true,
+                "showReuseMessage": false,
+                "panel": "dedicated",
+                "clear": true
+            }
+        }
+    ]
+}
