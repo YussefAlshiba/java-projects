@@ -1,0 +1,17 @@
+6
+sites
+0 Hagenberg
+1 Matzelsdorf
+2 Kefermarkt
+3 Gutau
+4 Pregarten
+5 Selker
+stages
+0 1 4.6 2
+0 4 3.6 3
+0 5 5.0 2
+4 5 5.2 2
+5 2 6.5 1
+5 3 6.1 1
+2 3 7.3 1
+1 2 6.7 2
